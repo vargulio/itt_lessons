@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let request = new XMLHttpRequest();
+        request.open("GET", "https://jsonplaceholder.typicode.com/posts");
+        request.responseType = 'json';
+        request.setRequestHeader('Content-type', 'application/json');
+        request.send();
+        console.log(1);
+        request.onload = () => {
+            console.log(request.response);
+            // console.log(request.getAllResponseHeaders());
+            console.log(request.getResponseHeader('cache-control'));
+        }
+        console.log(3);
+
+        let body = {
+            title: 'foo',
+            body: 'bar',
+            userId: 1,
+        }
+
+        let postRequest = new XMLHttpRequest();
+        postRequest.open("POST", "https://jsonplaceholder.typicode.com/posts");
+        //  WE MUST STRINGIFY THE BODY
+        postRequest.send(JSON.stringify(body));
+        postRequest.setRequestHeader('Content-type', 'application/json');
+        postRequest.responseType = 'json';
+
+        postRequest.onload = () => {
+            console.log(postRequest.response);
+        }
+
+    </script>
+</body>
+
+</html>
