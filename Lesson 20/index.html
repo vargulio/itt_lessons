@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+
+        body {
+            font-size: 20px;
+        }
+
+        .page {
+            min-height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login {
+            background-color: blueviolet;
+        }
+
+        #register {
+            background-color: khaki;
+        }
+        #home {
+            background-color: coral;
+        }
+
+        footer {
+            height: 150px;
+            background-color: green;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            background-color: black;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#login">Login</a>
+        <a href="#register">Register</a>
+        <a href="#home">Home</a>
+    </nav>
+    <div class="page" id="login">
+
+        <form id="loginForm">
+            <input name="username" type="text" placeholder="username">
+            <input name="pass" type="password" placeholder="pass">
+            <input type="submit" value="Login">
+        </form>
+
+    </div>
+    <div class="page" id="register">
+
+        <form>
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="pass">
+            <input type="password" placeholder="confirm pass">
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    <div class="page" id="home"></div>
+    <footer>Footer!</footer>
+    <script src="./UserManager.js"></script>
+    <script src="./ViewController.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <style>
+
+        /* selector by id - has the most highest priority from the selectors */
+        #answer {
+            color: blueviolet;
+            font-family: 'BasiQkiqFont' 'sans-serif';
+        }
+
+        /* internal css */
+        /*
+            <selector> {
+                <cssProperty>: <value>;
+            }
+        */
+        /* by tag name has the least priority from the selectors*/
+        /* p {
+            color: aquamarine;
+        } */
+        /*selector by classname - higher prio than tag name but lower than id*/
+        /*.higherOrder {
+            background-color: chartreuse;
+            color: black;
+        }
+        */
+        div .higherOrder {
+            background-color: rgb(25, 0, 255);
+            color: rgb(250, 0, 21);
+        } 
+
+        .catContainer {
+            /*margin: 20px; /* space from the border outwards*/
+            border: 2px solid black; /* the border!*/
+            padding: 25px; /*space form the border inwards*/
+            margin: 30px 20px 15px;    
+        }
+
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- The inline CSS -->
+    <p id="answer" style="color: pink; background-color: khaki; font-size: 48px;">Hi, how are you?</p>
+    <!-- doubling ids is bad omen -->
+    <p id="answer">Thanks, I am ok!</p>
+    <p class="higherOrder">How are you?</p>
+    <span class="higherOrder">I am good too, thanks!</span>
+    <div>
+        <p class="higherOrder anotherClass">Paragraph inside div</p>
+    </div>
+    <div class="catContainer">Kotka</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+
+    <style>
+        @keyframes moveSeconds {
+
+            0% {
+                transform-origin: 0 0;
+                transform: rotateZ(-90deg);
+            }
+
+            100% {
+                transform-origin: 0 0;
+                transform: rotateZ(270deg);
+            }
+
+        }
+
+        body>div {
+            width: 400px;
+            height: 400px;
+            background-color: magenta;
+        }
+
+        #nqkakvoId {
+            width: 200px;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            animation: moveSeconds 60s steps(60) infinite;
+        }
+
+
+        @media screen and (min-width: 320px) and (max-width: 768px) {
+            #nqkakvoId {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div id="nqkakvoId"></div>
+    </div>
+
+
+
+</body>
+
+</html>

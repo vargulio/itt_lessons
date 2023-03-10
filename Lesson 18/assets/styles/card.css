@@ -1,0 +1,44 @@
+.card {
+    display: grid;
+    width: 200px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid gainsboro;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: 5fr repeat(5, 1fr);
+
+    grid-template-areas: 
+    "a a"
+    "b b"
+    "c c"
+    "d d"
+    "e e"
+    "f g";
+}
+
+.card img {
+    grid-area: a;
+}
+
+.card .name {
+    grid-area: b;
+}
+
+.card .weight {
+    grid-area: c;
+}
+.card .category {
+    grid-area: d;
+}
+
+.card .price {
+    grid-area: e;
+}
+
+.card input {
+    grid-area: f;
+}
+
+.card button {
+    grid-area: g;
+}

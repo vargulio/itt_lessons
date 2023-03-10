@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+
+    <title>Document</title>
+    <style>
+
+
+        .container {
+            display: grid;
+            grid-template-rows: 60px 50px;
+            grid-template-columns: 1fr 4fr 4fr 1fr; /*10% 40% 40% 10*/
+            grid-auto-rows: 100px;
+            grid-auto-columns: 100px;
+
+            grid-template-areas: 
+            "h h h h"    
+            "n n n n"
+            "s c c ."
+            "s c c .";
+        }
+
+        header {
+            grid-area: h;
+            height: 60px;
+            background-color: coral;
+        }
+        nav {
+            grid-area: n;
+            height: 50px;
+            background-color: greenyellow;
+        }
+        .mainContainer {
+            grid-area: c;
+            min-height: 75vh;
+            background-color: gainsboro;
+        }
+        .sideMenu {
+            grid-area: s;
+            height: 100vh;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body class="container">
+
+        <header></header>
+        <nav></nav>
+        <div class="mainContainer"></div>
+        <div class="sideMenu"></div>
+    
+</body>
+</html>

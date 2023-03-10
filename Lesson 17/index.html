@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>    
+    <p id="firstParagraph">Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <script>
+
+        let firstParagraph = document.getElementById('firstParagraph');
+        console.log(firstParagraph);
+
+        function changeText (param) {
+            firstParagraph.innerText = "Chushki! + "+ param;
+        }
+
+        let id = setTimeout(changeText, 1000, "Morkovi", "Domati");
+        console.log(id);
+        if(Math.random() > 0.5) {
+            // I don't want to execute the changeText function
+            clearTimeout(id);
+            console.log("Bastisahme timera!");
+            console.log(id);
+        }
+
+    </script>
+</body>
+</html>

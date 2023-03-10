@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/card.css">
+    <script src="./data.js"></script>
+    <script src="./assets/model/DunerManager.js"></script>
+    <script src="./utils/helper.js"></script>
+    <script src="./assets/model/CartManager.js"></script>
+    <style>
+        header {
+            height: 60px;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .page {
+            min-height: 75vh;
+        }
+
+        #menu {
+            background-color: blueviolet;
+        }
+
+        #cart {
+            background-color: khaki;
+        }
+
+        #order {
+            background-color: green;
+        }
+
+        body {
+            font-size: 32px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #menu .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #deliveryForm {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #order .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <img width="50" src="./assets/images/logo.jpeg" alt="Logo">
+        <a href="#menu">Menu</a>
+        <a href="#cart">
+            <img width="50" src="./assets/images/cart.jpeg" alt="Cart">
+        </a>
+    </header>
+    <main>
+        <div class="page" id="menu">
+            <input type="text" id="searchInput" placeholder="What do you want?">
+            <div class="container">
+
+
+            </div>
+        </div>
+        <div class="page" id="cart">
+
+            <div class="container">
+
+            </div>
+
+        </div>
+        <div class="page" id="order">
+            <div class="container">
+
+                <form id="deliveryForm">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="phone" placeholder="Phone">
+                    <textarea name="address" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Deliver">
+                </form>
+            </div>
+            
+
+
+        </div>
+    </main>
+    <script src="./ViewController.js"></script>
+</body>
+
+</html>

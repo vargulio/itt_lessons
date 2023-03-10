@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Document</title>
+    <style>
+        #ringche {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            border-radius: 50%;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ringche"></div>
+
+    <script>
+        let title = document.getElementById('title');
+        let start = 1;
+        let endValue = 1.2;
+        let startValue = 1;
+        let step = (endValue - startValue) / 60;
+        let currentValue = startValue;
+        let direction = 1;
+        // ANIMATIONS DONE WRONG
+        let ringche = document.getElementById('ringche');
+        setInterval(() => {
+            start++;
+            title.innerText = start;
+            if(currentValue >= endValue) {
+                direction = -1;        
+            } else if(currentValue <= 1) {
+                direction = 1;
+            }
+
+            currentValue += step * direction;
+            ringche.style.transform = `scale(${currentValue})`;
+        }, 1000 / 60);
+
+
+    </script>
+</body>
+
+</html>

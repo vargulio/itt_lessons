@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Document</title>
+    <style>
+       #dqdo{
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+       }
+       #tatko {
+            width: 300px;
+            height: 300px;
+            background-color: khaki;
+       }
+       #bebe {
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+       }
+    </style>
+</head>
+
+<body>
+    <a id="link" href="https://trainingcamp.ittalents.bg/" >ITT camp</a>
+    <div id="dqdo">
+        <div id="tatko">
+            <div id="bebe"></div>
+        </div>
+    </div>
+
+    <script>
+
+        let dqdo = document.getElementById('dqdo');
+        let tatko = document.getElementById('tatko');
+        let bebe = document.getElementById('bebe');
+        let link = document.getElementById('link');
+
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            console.log('Kyde si trygnal!?');
+        })
+        function sayHi(e) {
+            // this === e.currentTarget
+            // if(this.id === 'tatko') {
+            //     e.stopPropagation();
+            // }
+            // console.log(arguments[0]);
+            e.stopImmediatePropagation();
+            console.log('---------------');
+            console.log(e.currentTarget);
+            // e.currentTarget is always the element that we attached the listener to
+            console.log(e.target);
+            console.log('---------------');
+        }
+
+        dqdo.addEventListener('click',sayHi, true );
+        dqdo.addEventListener('click', console.log, true);
+
+        tatko.addEventListener('click',sayHi,true); 
+        bebe.addEventListener('click',sayHi, true );
+
+
+
+
+        
+
+    </script>
+</body>
+
+</html>

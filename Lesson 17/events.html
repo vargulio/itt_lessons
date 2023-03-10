@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Document</title>
+    <style>
+        #ringche {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            border-radius: 50%;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="ringche" onclick="changeColor()" ></div> eventListeners as attributes -->
+    <div id="ringche"></div>
+
+    <script>
+
+
+       
+        let ringche = document.getElementById('ringche');
+        
+        // ringche.onclick = changeColor; // level 1 attachments
+        // ringche.onclick = will overwrite the row above
+     
+        ringche.addEventListener('click', changeColor);
+        // anonymous functions cant be removed from listening
+        ringche.addEventListener('click', () => { console.log('I was clicked!');});
+
+        ringche.removeEventListener('click', changeColor);
+        
+        function changeColor () {
+            ringche.style.backgroundColor  = 
+            ringche.style.backgroundColor === 'red' ? 'blueviolet' : 'red';
+        }
+
+
+        
+
+    </script>
+</body>
+
+</html>

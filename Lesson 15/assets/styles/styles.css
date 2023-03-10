@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "BasiQkiqFont";
+    src: url("../fonts/font.otf");
+}
+
+
+/* selector by id - has the most highest priority from the selectors */
+#answer {
+    color: blueviolet;
+}
+
+/* internal css */
+/*
+    <selector> {
+        <cssProperty>: <value>;
+    }
+*/
+/* by tag name has the least priority from the selectors*/
+p {
+    color: aquamarine;
+}
+/*selector by classname - higher prio than tag name but lower than id*/
+.higherOrder {
+    background-color: chartreuse;
+    color: black;
+}
+
+div .higherOrder {
+    background-color: aqua;
+    color: coral;
+}
+
+.catContainer {
+    background: url("../images/cat.webp");
+    height: 500px;
+    background-size: 50% 65%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}

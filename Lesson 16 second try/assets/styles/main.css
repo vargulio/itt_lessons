@@ -1,0 +1,53 @@
+body {
+    display: grid;
+    grid-template-rows: repeat(2, 50px) auto 150px;
+    grid-template-columns: repeat(12, 1fr);
+    font-size: var(--main-font-size);
+    background-color: rgba(222,15,199,0.15);
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "n n n n n n n n n n n n"
+        ". . c c c c c c c c . ."
+        "f f f f f f f f f f f f";
+}
+
+header {
+    grid-area: h;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: var(--main-text-color);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+}
+
+nav {
+    grid-area: n;
+    background-color: var(--nav-bg);
+    display: flex;
+    color: var(--main-text-color);
+    align-items: center;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+nav a:hover {
+    color: black;
+}
+
+main {
+    grid-area: c;
+}
+
+footer {
+    grid-area: f;
+}
