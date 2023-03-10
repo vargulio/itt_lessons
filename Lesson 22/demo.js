@@ -1,21 +1,33 @@
 let promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-        reject("Bahur");
-    }, 2000)
+        resolve("Bahur");
+    }, 500)
 });
-
 
 promise
     .then(data => {
-        console.log(data);
-        return data;
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if(Math.random() > 0.5) {
+                    reject("Bahur 1");
+                } else {
+                    resolve("Bahur 1 success");
+                }
+            }, 500)
+        });
     })
-    .then(res => {
-        console.log("From second then", res);
-    })
-    .then(result => {
-        console.log(result);
+    .then(data => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("Bahur 2");
+            }, 500)
+        });
     })
     .catch(err => {
         console.log(err);
     })
+    .finally(() => {
+        console.log("Finished!");
+    });
+    
+
