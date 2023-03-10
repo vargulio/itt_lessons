@@ -5,6 +5,9 @@ function teach () {
     console.log( this.name + " bere qdove");
 }
 
+
+
+
 let person = {
     // name: "Slavi",
     age: 31,
