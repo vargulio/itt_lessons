@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // function doSomethingAsync() {
+
+
+        //     return new Promise((resolve, reject) => {
+
+
+        //         let request = new XMLHttpRequest();
+        //         request.open("GET", "https://swapi.dev/api/people/maikati");
+        //         request.responseType = 'json';
+        //         request.send();
+
+        //         request.onload = () => {
+        //             if(request.status >= 200 && request.status <=299) {
+        //                 resolve(.responserequest);
+        //             } else {
+        //                 reject("Something went wrong");
+        //             }
+
+        //         }
+        //     })
+        // }
+
+        function myFetch(url) {
+            return fetch(url)
+                        .then(response => {
+                            if(response.ok) {
+                                return response.json();
+                            } else {
+                                return Promise.reject("Something went wrong");
+                            }
+                            
+                        })
+        }
+
+        myFetch("https://swapi.dev/api/people/1")
+            .then(body => {
+                console.log(body);
+                return myFetch(body.homeworld);
+            })
+            .then(planetResponse => {
+                console.log(planetResponse);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+           
+
+
+    </script>
+</body>
+
+</html>

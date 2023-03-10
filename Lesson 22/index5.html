@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+
+        function myFetch(url) {
+            return fetch(url)
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        return Promise.reject("Something went wrong");
+                    }
+
+                })
+        }
+
+        // rejects if some of the Promises reject
+        // Promise.all(
+        //     [
+        //         myFetch("https://swapi.dev/api/people/1"),
+        //         myFetch("https://swapi.dev/api/planets/maikati")
+        //     ]
+        // ).then(responses => {
+        //     console.log(responses);
+        // }).catch(err => {
+        //     console.log(err);
+        // })
+
+        // rejects if some of the Promises reject
+        // Promise.allSettled(
+        //     [
+        //         myFetch("https://swapi.dev/api/people/1"),
+        //         myFetch("https://swapi.dev/api/planets/maikati")
+        //     ]
+        // ).then(responses => {
+        //     console.log(responses);
+        // }).catch(err => {
+        //     console.log(err);
+        // })
+
+        // Promise.race(
+        //     [
+        //         myFetch("https://swapi.dev/api/people/1"),
+        //         myFetch("https://swapi.dev/api/planets/1")
+        //     ]
+        // ).then(responses => {
+        //     console.log(responses);
+        // }).catch(err => {
+        //     console.log(err);
+        // })
+
+         Promise.any(
+            [
+                myFetch("https://swapi.dev/api/people/1"),
+                myFetch("https://swapi.dev/api/planets/1")
+            ]
+        ).then(responses => {
+            console.log(responses);
+        }).catch(err => {
+            console.log(err);
+        })
+
+
+
+    </script>
+</body>
+
+</html>
