@@ -7,6 +7,8 @@
 // repeat 
 // while x is less than 100
 
+
+
 for(let i=-100; i<=100; i++) {
     console.log(i);
 }
