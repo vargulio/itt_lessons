@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./utilities/request.js"></script>
+    <script src="./utilities/debounce.js"></script>
+    <script src="./model/MovieManager.js"></script>
+    <style>
+        #searchInput,
+        #suggestion {
+            width: 400px;
+        }
+
+        #suggestion {
+            display: none;
+            background-color: gainsboro;
+            border-radius: 10px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #results {
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+
+        #pagination {
+            display: none;
+        }
+
+        #pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        #pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <input type="text" name="searchInput" id="searchInput" placeholder="Search for movies">
+    <div id="suggestion">
+
+    </div>
+    <div id="results">
+
+    </div>
+    <div id="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
