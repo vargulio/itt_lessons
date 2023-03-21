@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="./constants.js"></script>
+    <script src="./utilities.js"></script>
+    <script src="./models/UserManager.js"></script>
+    <script src="./models/PartiesManager.js"></script>
+    <script src="./controllers/registerController.js"></script>
+    <script src="./controllers/loginController.js"></script>
+    <script src="./controllers/listingsController.js"></script>
+    <style>
+        .form-register,
+        .form-signin {
+            width: 300px;
+            margin: auto;
+        }
+
+        #partiesResults{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+    </style>
+</head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#listings">Listings</a>              
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="#details">Details</a>
+                  <a class="nav-link" href="#results">Results</a>
+                  <a class="nav-link" href="#login">Login</a>
+                  <a class="nav-link" href="#register">Register</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div id="register" class="text-center">
+
+        <form id="registerForm" class="form-register">
+            <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+            <label for="inputEmail" class="sr-only">Username</label>
+            <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <label for="inputPasswordConfirm" class="sr-only">Confirm Password</label>
+            <input name="confirmPass" type="password" id="inputPasswordConfirm" class="form-control" placeholder="Confirm password" required="">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+            <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+          </form>
+
+    </div>
+    <div id="login" class="text-center">
+
+        <form id="loginForm" class="form-register">
+            <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Username</label>
+            <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+          </form>
+
+    </div>
+    <div id="listings">
+        <input type="text" id="searchPartiesInput">
+        <div id="partiesResults">
+
+
+        </div>
+
+
+
+    </div>
+    <div id="details"></div>
+    <div id="results"></div>
+    <div id="404">Not found</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
