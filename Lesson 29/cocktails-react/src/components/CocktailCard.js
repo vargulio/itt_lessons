@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import './CocktailCard.css';
+import './CocktailCard.scss';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Link } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ function CocktailCard(props) {
                 </Button>
                 <Button 
                 variant="primary">
-                    <Link className={'link'} to={'/details/'+ id}>Details</Link>
+                    <Link className={'link'} to={'/cocktails/details/'+ id}>Details</Link>
                     
                 </Button>
                 </ButtonGroup>

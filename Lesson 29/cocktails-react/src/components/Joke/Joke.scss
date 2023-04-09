@@ -1,0 +1,36 @@
+@import "../../variables";
+@import "../../mixins";
+
+.jokeContainer {
+    // background-color: $main-color;
+    @include custom-container(20px);
+
+    &.someOtherClass{
+        font-size: 28px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    span {
+        color: white;
+    }
+}
+
+// .jokeContainer {
+//     background-color: $main-color;
+// }
+
+// .jokeContainer span {
+//     color: white;
+// }
+
+
+// .jokeContainer .someOtherClass {
+
+// }
+
+// .jokeContainer.someOtherClass {
+
+// }

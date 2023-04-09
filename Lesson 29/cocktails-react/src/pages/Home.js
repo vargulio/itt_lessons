@@ -1,7 +1,7 @@
 import React from "react";
 import CocktailCard from "../components/CocktailCard";
 import cocktailManager from "../services/CocktailManager";
-import "./Home.css";
+import "./Home.scss";
 
 export default class HomePage extends React.Component {
 

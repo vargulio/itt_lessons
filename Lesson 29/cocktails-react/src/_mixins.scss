@@ -1,0 +1,8 @@
+@mixin custom-container($radius) {
+    border-radius: $radius;
+    background-color: whitesmoke;
+    border: 1px solid blueviolet;
+    .customClass {
+        color: red;
+    }
+}
