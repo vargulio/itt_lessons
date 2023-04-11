@@ -1,0 +1,10 @@
+.oap-container {
+    min-width: 200px;
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+    box-shadow: 10px 10px 5px 0px rgba(184,177,184,1);
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(238, 66, 23, 0.15);
+    }
+}

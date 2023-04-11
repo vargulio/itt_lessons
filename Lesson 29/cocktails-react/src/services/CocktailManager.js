@@ -1,6 +1,6 @@
 import axios from "axios";
 
-class Cocktail {
+export class Cocktail {
 
     constructor(cocktail) {
 

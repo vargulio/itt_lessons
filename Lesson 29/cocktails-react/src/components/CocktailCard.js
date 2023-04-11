@@ -12,28 +12,31 @@ function CocktailCard(props) {
     // }
 
     return (
-        <Card className='cocktailCard'>
-            <Card.Img variant="top" src={image} />
-            <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                    {ingredients.join(',')}
-                </Card.Text>
-                <ButtonGroup>
+        // <Container>
+            <Card className='cocktailCard'>
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title>{name}</Card.Title>
+                    <Card.Text>
+                        {ingredients.join(',')}
+                    </Card.Text>
+                    <ButtonGroup>
 
-                <Button 
-                onClick={() => props.onToggleFavorite(id)} 
-                variant="primary">
-                    {props.isFavorite ? 'Remove' : 'Add to fav'}
-                </Button>
-                <Button 
-                variant="primary">
-                    <Link className={'link'} to={'/cocktails/details/'+ id}>Details</Link>
-                    
-                </Button>
-                </ButtonGroup>
-            </Card.Body>
-        </Card>
+                        <Button
+                            onClick={() => props.onToggleFavorite(id)}
+                            variant="primary">
+                            {props.isFavorite ? 'Remove' : 'Add to fav'}
+                        </Button>
+                        <Button
+                            variant="primary">
+                            <Link className={'link'} to={'/cocktails/details/' + id}>Details</Link>
+
+                        </Button>
+                    </ButtonGroup>
+                </Card.Body>
+            </Card>
+        //  </Container>
+
     );
 }
 
